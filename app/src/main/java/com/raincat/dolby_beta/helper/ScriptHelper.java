@@ -90,7 +90,7 @@ public class ScriptHelper {
     }
 
     public static void startScript() {
-        String script = String.format("export ENABLE_FLAC=%s&&export MIN_BR=%s&&libnode.so app.js -a 127.0.0.1 -o %s -p %s",
+        String script = String.format("export ENABLE_FLAC=%s&&export MIN_BR=%s&&libnode.so app.js -a 127.0.0.1 -o %s -p %s -e https://music.163.com",
                 SettingHelper.getInstance().getSetting(SettingHelper.proxy_flac_key), SettingHelper.getInstance().getSetting(SettingHelper.proxy_priority_key) ? "256000" : "96000",
                 SettingHelper.getInstance().getProxyOriginal(), SettingHelper.getInstance().getProxyPort() + ":" + (SettingHelper.getInstance().getProxyPort() + 1));
 
